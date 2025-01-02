@@ -65,4 +65,4 @@ console.log(typeof 42)        // Output: number
 console.log(typeof true)      // Output: boolean
 console.log(typeof null)      // Output: object
 console.log(typeof undefined) // Output: undefined
-console.log(typeof Symbol()) // Output: symbol
+console.log(typeof Symbol())  // Output: symbol
