@@ -66,3 +66,6 @@ console.log(typeof true)      // Output: boolean
 console.log(typeof null)      // Output: object
 console.log(typeof undefined) // Output: undefined
 console.log(typeof Symbol())  // Output: symbol
+
+// Memory Allocation
+/* Stack (Primitive datatypes it stores copy of original) and Heap(Non-primitive datatypes as it shows refernce only) */
