@@ -20,7 +20,7 @@ for (const [key,value] of name) {   // For accessing each value or key of map
     console.log(key)
 }
 
-// Object cannot be accessed using forof method
+// Object cannot be accessed using forof method as they are not iterables in js
 const heroes = {
     "Avengers" :"Ironman",
     "DC" : "Superman",
