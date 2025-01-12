@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <ul class="parent">
+        <li class="hero">Aquaman</li>
+        <li class="hero">SE</li>
+        <li class="hero">Ironman</li>
+    </ul>
+    <script>
+        const h1 = document.createElement('h1')
+        console.log(h1)
+        h1.className = 'heading'
+        h1.id = Math.random()*10
+        h1.style.backgroundColor = "red"
+        h1.innerText = "Arpit Dhumane"
+        // h1.setAttribute("title" , "name") instead of this use createnodetext
+        const h = document.createTextNode("YCCE")
+        h1.appendChild(h)
+        document.body.appendChild(h1)
+        // Add the element in document
+        // function addhero(name){
+        //     const li = document.createElement('li')
+        //     li.innerHTML = `${name}`
+        //     document.querySelector('.parent').appendChild(li)
+        // }
+        // addhero("Flash")
+        function addhero(name){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(name))
+            document.querySelector('.parent').appendChild(li)
+        }
+        addhero("DR.Strange")
+    </script>
+</body>
+</html>
