@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul class="parent">
         <li class="hero">Aquaman</li>
@@ -12,8 +14,19 @@
         <li class="hero">Ironman</li>
     </ul>
     <script>
-        const li = document.querySelector('li:n-th child[2]')
-        console.log(li)
+        // Edit element
+        const li = document.querySelector('li:nth-child(2)') // This line is commented out but should select the second <li> element
+        // console.log(li) // Logs the selected <li> element to the console
+        // li.innerHTML = "Captain America" // This line is commented out but would change the inner content of the selected <li> element
+        const old = document.createElement('li') // Creates a new <li> element
+        old.textContent = "Batman" // Sets the text content of the new <li> element to "Batman"
+        li.replaceWith(old) // Replaces the selected <li> element with the new one that contains "Batman"
+        const newadd = document.querySelector('li:first-child') // Selects the first <li> element in the document
+        newadd.outerHTML = "<li>Widow</li>" // Replaces the entire HTML of the first <li> with a new <li> element containing "Widow"
+        // remove element
+        const last  = document.querySelector("li:nth-child(2)")
+        last.remove()
     </script>
 </body>
+
 </html>
