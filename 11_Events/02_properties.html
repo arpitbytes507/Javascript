@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Properties Example</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    Hover or click me
+</div>
+<script>
+    // Event listener for mouse events
+    const box = document.getElementById('box');
+    box.addEventListener('mouseover', function(event) {
+        console.log('Event Type:', event.type);  // Type of event(mouseover)
+        console.log('Timestamp:', event.timeStamp);  // Timestamp of the event
+        console.log('Default Prevented:', event.defaultPrevented);  // Whether default was prevented(false by default)
+        console.log('Event Target:', event.target);  // The element the event is fired on (box)
+        console.log('To Element:', event.toElement);  // Element the mouse is movingto(box)
+        console.log('Src Element:', event.srcElement);  // Element that triggered the event(box)
+        console.log('Current Target:', event.currentTarget);  // The element the listener is attached to (box)
+    });
+    // Prevent default action in another event type for demonstration
+    box.addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent default action (e.g., if it was a link)
+        console.log('Click event triggered');
+        console.log('Default Prevented on click:', event.defaultPrevented);  // True after preventDefault
+    });
+</script>
+</body>
+</html>
